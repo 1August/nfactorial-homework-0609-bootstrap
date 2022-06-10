@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap & JQuery Mix</title>
+    <!-- Icon -->
+    <link rel="icon"
+          href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Video-Game-Controller-Icon-IDV-green.svg/1024px-Video-Game-Controller-Icon-IDV-green.svg.png">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous" defer></script>
+    <!-- Own CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
+    <!-- Own JS -->
+    <script src="./index.js" defer></script>
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-dark text-light">
+    <div class="container d-flex justify-content-center p-4">
+        <h1>Homework <span>nFactorial</span> by Kuanysh Maksat</h1>
+    </div>
+</nav>
+<main class="h-100 d-flex align-items-center flex-column flex-md-row">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 col-12 d-flex justify-content-center border-end py-5">
+                <aside class="d-flex align-items-center justify-content-center h-100 py-md-5">
+                    <ul class="list-group flex-row flex-wrap flex-md-column list-unstyled py-md-5 ">
+                        <li><a class="goHome list-group-item list-group-item-action py-3 active" href="#">Home</a></li>
+                        <li><a class="goLibs list-group-item list-group-item-action py-3" href="#">Mad Labs</a></li>
+                        <li><a class="goThumb list-group-item list-group-item-action py-3" href="#">Tom Thumb</a></li>
+                    </ul>
+                </aside>
+            </div>
+            <div class="col-md-10 col-12 d-flex justify-content-center">
+                <section class="game w-75 h-100 d-flex align-items-center justify-content-center">
+
+                    <div class="home d-flex align-items-center justify-content-center flex-column py-5 my-5">
+                        <h1 class="mb-5 text-center">Welcome, stranger!</h1>
+                        <img class="w-50" src="https://ouch-cdn2.icons8.com/yORgyCQQ7LIbbTfC73Nq66z4x9WSMO8OXGc2tH3Uvs4/rs:fit:1082:912/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvNDU2/LzNjOGU0MmU4LWU3/MzMtNDIwNi04Njky/LWQwYWFmODQ4ODI0/NC5zdmc.png"
+                             alt="Welcome illustration">
+                    </div>
+
+                    <div class="libs d-flex align-items-center justify-content-center flex-column py-md-5 my-md-5">
+                        <h1 class="mb-5 text-center">Mad Libs</h1>
+                        <form class="border p-4 mb-5">
+                            <label for="name">Person Name:</label>
+                            <input id="name" class="form-control mb-4" type="text" required>
+
+                            <label for="character">Character:</label>
+                            <input id="character" class="form-control mb-4" type="text" required>
+
+                            <label for="adverb">Adverb:</label>
+                            <input id="adverb" class="form-control mb-4" type="text" required>
+
+                            <label for="adjective">Adjective:</label>
+                            <input id="adjective" class="form-control mb-4" type="text" required>
+
+                            <button class="btn btn-primary" type="submit">Tell story</button>
+                        </form>
+                        <div class="story w-75 py-4">
+                            <h3 class="text-center">One crazy story for you.</h3>
+                            <p>
+                                One day, my friend <span class="name"></span> was visiting New York and ran into
+                                <span class="character"></span>. <span class="name"></span> ran <span
+                                    class="adverb"></span> to meet
+                                <span class="character"></span>. But <span class="character"></span> turned out to be
+                                very
+                                <span class="adjective"></span> and <span class="name"></span> did not enjoy the
+                                meeting.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="thumb d-flex align-items-center justify-content-center flex-column py-md-5 my-md-5">
+                        <h1 class="mb-5 text-center">Tom Thumb</h1>
+                        <form class="border p-4 mb-5">
+                            <label for="width">Image width (px):</label>
+                            <input id="width" class="form-control mb-4" type="number" required min="1">
+
+                            <label for="height">Image height (px):</label>
+                            <input id="height" class="form-control mb-4" type="number" required min="1">
+
+                            <label for="colors">Number of colors:</label>
+                            <input id="colors" class="form-control mb-4" type="number" required min="1">
+
+                            <button class="btn btn-primary">Calculate File size</button>
+                        </form>
+                        <div class="calculation w-75 py-4">
+                            <h3 class="text-center">File size</h3>
+                            <p>
+                                File is <span class="size"></span> KB which is <span class="isOk"></span>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="p-4 bg-dark">
+    <div class="container">
+        <div class="row justify-content-between align-items-center flex-wrap">
+            <div class="col-md-2 col-sm-4 col-6">
+                <img class="img-thumbnail rounded"
+                     src="https://t4.ftcdn.net/jpg/02/73/52/25/360_F_273522577_L4kon915I5C53utvsws0TEPInaD3G8ZS.jpg"
+                     alt="partners">
+            </div>
+            <div class="col-md-2 col-sm-4 col-6">
+                <img class="img-thumbnail rounded"
+                     src="https://www.leaderssl.it/assets/getwildcard_engine/partners/partnership_logo-c0959042f9db394cee51cea5296a69413e00da779c1dc1097885a72277fd0c52.png"
+                     alt="partners">
+            </div>
+            <div class="col-md-2 col-sm-4 col-6">
+                <img class="img-thumbnail rounded"
+                     src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Partners_Logo.png" alt="partners">
+            </div>
+        </div>
+        <!--        <div class="partners d-flex align-items-center justify-content-evenly flex-wrap gap-5">-->
+        <!--            -->
+        <!--        </div>-->
+    </div>
+</footer>
+
+</body>
+</html>
